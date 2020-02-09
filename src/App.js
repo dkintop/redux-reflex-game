@@ -3,7 +3,7 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/home.js";
 import GameStart from "./components/game-start";
-import HighScores from "./components/HighScores";
+import HighScoresContainer from "./components/HighScoresContainer";
 import NavBar from "./components/NavBar";
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
         </Route>
 
         <Route path="/high-scores">
-          <HighScores />
+          <HighScoresContainer />
         </Route>
       </Switch>
     </Router>
