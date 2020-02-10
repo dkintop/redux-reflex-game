@@ -34,7 +34,7 @@ export class NewScoreForm extends Component {
     );
   }
 }
-
+//this will be a hidden form that will dispatch our action to the combined add high score action.
 let mapdispatchToProps = dispatch => {
   return {
     addHighScore: score => dispatch(addHighScore(score))

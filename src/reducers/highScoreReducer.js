@@ -1,11 +1,10 @@
-export default function highScoreReducer(
-  state = [{ name: "Doug", score: 0.1, id: 1 }],
-  action
-) {
+export default function highScoreReducer(state = [], action) {
   switch (action.type) {
     case "ADD_HIGHSCORE":
       return [...state, action.payload];
 
+    case "GET_HIGHSCORES":
+      return [...action.payload];
     default:
       return state;
   }
