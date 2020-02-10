@@ -4,20 +4,18 @@ import HighScore from "./HighScore.js";
 export class HighScoresContainer extends Component {
   render() {
     return (
-      <div>
-        <ol>
-          {this.props.highScores.map(score => (
-            <HighScore score={score} />
-          ))}
-        </ol>
-      </div>
+      <ol>
+        {this.props.highScores.map(score => (
+          <HighScore score={score} />
+        ))}
+      </ol>
     );
   }
 }
 
 const mapStateToProps = state => {
   return {
-    highScores: state.highScores
+    highScores: state.slice(0, 10)
   };
 };
 
