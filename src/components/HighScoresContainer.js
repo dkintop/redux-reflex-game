@@ -15,7 +15,7 @@ export class HighScoresContainer extends Component {
 
 const mapStateToProps = state => {
   return {
-    highScores: state.slice(0, 10)
+    highScores: state.highScoreReducer.slice(0, 10)
   };
 };
 
