@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/home.js";
-import GameStart from "./components/game-start";
+import GameContainer from "./components/GameContainer";
 import HighScoresContainer from "./components/HighScoresContainer";
 import NavBar from "./components/NavBar";
 
@@ -16,7 +16,7 @@ function App() {
         </Route>
 
         <Route path="/game-start">
-          <GameStart />
+          <GameContainer />
         </Route>
 
         <Route path="/high-scores">
