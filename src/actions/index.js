@@ -10,7 +10,14 @@ export const fetchScores = () => {
     return fetch("http://localhost:3000/games")
       .then(resp => resp.json())
       .then(scores => {
-        dispatch({ type: "GET_HIGHSCORES", payload: scores });
+        let sortedScores = scores.sort(function(a, b) {
+          if (a.score - b.score > 0) {
+            return 1;
+          } else {
+            return -1;
+          }
+        });
+        dispatch({ type: "GET_HIGHSCORES", payload: sortedScores });
       });
   };
 };

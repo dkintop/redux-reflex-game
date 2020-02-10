@@ -8,7 +8,6 @@ export class HighScoresContainer extends Component {
   }
 
   render() {
-    debugger;
     return (
       <ol>
         {this.props.highScores.map(score => (
@@ -21,8 +20,8 @@ export class HighScoresContainer extends Component {
 
 const mapStateToProps = state => {
   return {
-    highScores: state.highScoreReducer
+    highScores: state.highScoreReducer.slice(0, 10)
   };
 };
-//slice() utilized to display only top 10 highscores. will need to manage how/where to sort data from lowest score to highest score.
+//slice() utilized to display only top 10 highscores. will need to manage how/where to sort data from lowest score to highest score.probably in the action where you receive the scores?
 export default connect(mapStateToProps, { fetchScores })(HighScoresContainer);
