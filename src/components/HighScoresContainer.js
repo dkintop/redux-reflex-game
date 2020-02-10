@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import HighScore from "./HighScore.js";
 import { fetchScores } from "../actions/index.js";
 export class HighScoresContainer extends Component {
-  componentWillMount() {
+  componentDidMount() {
     this.props.fetchScores();
   }
 

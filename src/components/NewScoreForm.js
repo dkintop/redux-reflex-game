@@ -29,7 +29,6 @@ export class NewScoreForm extends Component {
           <input type="float" name="score" onChange={this.handleChange} />
           <input type="submit" value="submit score" />
         </form>
-        <p>{this.state.name}</p>
       </div>
     );
   }
@@ -40,5 +39,7 @@ let mapdispatchToProps = dispatch => {
     addHighScore: score => dispatch(addHighScore(score))
   };
 };
+
+//will likely need to replace null with mapdispatchtoprops that grabs game information from the store.
 
 export default connect(null, mapdispatchToProps)(NewScoreForm);

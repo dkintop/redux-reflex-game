@@ -1,7 +1,16 @@
 export const addHighScore = score => {
-  return {
-    type: "ADD_HIGHSCORE",
-    payload: score
+  return dispatch => {
+    return fetch("http://localhost:3000/games", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json"
+      },
+      body: JSON.stringify({ game: score })
+    })
+      .then(resp => resp.json())
+      .then(score => {
+        dispatch({ type: "ADD_HIGHSCORE", payload: score });
+      });
   };
 };
 
