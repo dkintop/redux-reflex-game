@@ -3,7 +3,17 @@ export default function gameReducer(
   action
 ) {
   switch (action.type) {
-    //add case statements here
+    case "START_GAME":
+      return {
+        ...state,
+        initialized: action.payload
+      };
+
+    case "RESET_GAME":
+      return {
+        ...state,
+        initialized: action.payload
+      };
     default:
       return state;
   }
