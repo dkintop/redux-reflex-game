@@ -45,3 +45,12 @@ export const resetGame = () => {
     });
   };
 };
+
+export const recordScore = score => {
+  return dispatch => {
+    dispatch({
+      type: "RECORD_SCORE",
+      payload: score
+    });
+  };
+};

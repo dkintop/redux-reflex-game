@@ -29,8 +29,8 @@ code {
   border-radius: 10px;
   box-shadow: 10px, 10px, black;
   justify-content: space-around;
-
-  display: flex;
+  text-align: center;
+  display: grid;
   flex-wrap: wrap;
 }
 
@@ -40,4 +40,8 @@ code {
   flex-wrap: wrap;
   justify-content: space-around;
   width: 50%;
+}
+
+#game-tile-active {
+  justify-self: center;
 }

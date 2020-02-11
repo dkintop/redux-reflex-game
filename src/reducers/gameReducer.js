@@ -14,6 +14,13 @@ export default function gameReducer(
         ...state,
         initialized: action.payload
       };
+
+    case "RECORD_SCORE":
+      return {
+        ...state,
+        score: action.payload
+      };
+
     default:
       return state;
   }

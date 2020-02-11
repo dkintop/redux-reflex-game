@@ -1,34 +1,60 @@
 import React, { Component } from "react";
-
-export default class ActiveGameTile extends Component {
+import { recordScore } from "../actions/index.js";
+import { addHighScore } from "../actions/index.js";
+import { connect } from "react-redux";
+export class ActiveGameTile extends Component {
   state = {
-    time: 0.0
+    score: 0.0,
+    showForm: false
   };
 
   incrementTime = () => {
-    return this.setState(state => {
-      return { time: state.time + 0.0001 };
-    });
+    this.setState(prevState => ({
+      ...prevState,
+      score: prevState.score + 10
+    }));
   };
 
   componentDidMount() {
-    setInterval(this.incrementTime(), 1000);
+    this.interval = setInterval(this.incrementTime, 10);
   }
 
-  shouldComponentUpdate(nextState, prevState) {
-    if (nextState === prevState) {
-      return false;
-    } else {
-      return true;
-    }
+  formatTime() {
+    return this.state.score / 1000;
   }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
+
+  toggleForm = () => {
+    this.setState(prevState => ({
+      ...prevState,
+      showForm: true
+    }));
+  };
+
+  handleClick = () => {
+    clearInterval(this.interval);
+    this.props.recordScore(this.state.score);
+  };
 
   render() {
     return (
-      <div className="game-tile-active" key="90">
+      <div className="game-tile-active" key="90" onClick={this.handleClick}>
         <div>CLICK ME!</div>
-        <div>{this.state.time}</div>
+
+        <div id="time-display">{this.formatTime()}</div>
       </div>
     );
   }
 }
+
+let mapdispatchToProps = dispatch => {
+  return {
+    recordScore: score => dispatch(recordScore(score / 1000)),
+    addHighScore: score => dispatch(addHighScore(score))
+  };
+};
+
+export default connect(null, mapdispatchToProps)(ActiveGameTile);
