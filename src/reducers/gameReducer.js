@@ -1,5 +1,5 @@
 export default function gameReducer(
-  state = { score: null, initialized: false },
+  state = { score: "", initialized: false },
   action
 ) {
   switch (action.type) {

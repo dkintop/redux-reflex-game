@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 export class NewScoreForm extends Component {
   state = {
     name: "",
-    score: ""
+    score: this.props.score
   };
 
   handleChange = event => {
@@ -16,30 +16,39 @@ export class NewScoreForm extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    this.props.addHighScore(this.state);
+    this.props.addHighScore({ name: this.state.name, score: this.props.score });
   };
 
   render() {
+    debugger;
     return (
       <div>
         <form className="newScoreform" onSubmit={this.handleSubmit}>
           <label>Name</label>
           <input type="text" name="name" onChange={this.handleChange} />
-          <label>Score</label>
-          <input type="float" name="score" onChange={this.handleChange} />
+          <input
+            type="hidden"
+            name="score"
+            onChange={this.handleChange}
+            value={this.props.score}
+          />
           <input type="submit" value="submit score" />
         </form>
       </div>
     );
   }
 }
-//the score field will be hidden and value assigned based on the result of the game
+
 let mapdispatchToProps = dispatch => {
   return {
     addHighScore: score => dispatch(addHighScore(score))
   };
 };
 
-//will likely need to replace null with mapdispatchtoprops that grabs game information from the store.
+const mapStateToProps = state => {
+  return {
+    score: state.gameReducer.score
+  };
+};
 
-export default connect(null, mapdispatchToProps)(NewScoreForm);
+export default connect(mapStateToProps, mapdispatchToProps)(NewScoreForm);

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { recordScore } from "../actions/index.js";
 import { addHighScore } from "../actions/index.js";
 import { connect } from "react-redux";
+import { NewScoreForm } from "./NewScoreForm.js";
 export class ActiveGameTile extends Component {
   state = {
     score: 0.0,
@@ -34,9 +35,16 @@ export class ActiveGameTile extends Component {
     }));
   };
 
+  handleToggleForm = () => {
+    if (this.state.showForm) {
+      return <NewScoreForm />;
+    }
+  };
+
   handleClick = () => {
     clearInterval(this.interval);
     this.props.recordScore(this.state.score);
+    this.toggleForm();
   };
 
   render() {
@@ -45,6 +53,7 @@ export class ActiveGameTile extends Component {
         <div>CLICK ME!</div>
 
         <div id="time-display">{this.formatTime()}</div>
+        {this.handleToggleForm()}
       </div>
     );
   }
