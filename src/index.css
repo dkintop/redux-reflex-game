@@ -15,7 +15,7 @@ code {
 .game-tile {
   background-color: teal;
   flex: 0 0 32%;
-  height: 100px;
+  height: 150px;
   margin-bottom: 5px;
   border-radius: 10px;
   box-shadow: 10px, 10px, black;
@@ -24,10 +24,14 @@ code {
 .game-tile-active {
   background-color: yellowgreen;
   flex: 0 0 32%;
-  height: 100px;
+  height: 150px;
   margin-bottom: 5px;
   border-radius: 10px;
   box-shadow: 10px, 10px, black;
+  justify-content: space-around;
+
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #game-board {
