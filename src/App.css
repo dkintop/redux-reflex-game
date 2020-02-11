@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.game-board {
+  display: grid;
+}
+
+.game-tile {
+  backgroundcolor: red;
+}

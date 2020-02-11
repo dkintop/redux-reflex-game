@@ -29,5 +29,5 @@ const mapStateToProps = state => {
     initialized: state.gameReducer.initialized
   };
 };
-//slice() utilized to display only top 10 highscores. will need to manage how/where to sort data from lowest score to highest score.probably in the action where you receive the scores?
+
 export default connect(mapStateToProps)(GameContainer);
