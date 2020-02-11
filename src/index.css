@@ -13,7 +13,16 @@ code {
 }
 
 .game-tile {
-  background-color: crimson;
+  background-color: teal;
+  flex: 0 0 32%;
+  height: 100px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  box-shadow: 10px, 10px, black;
+}
+
+.game-tile-active {
+  background-color: yellowgreen;
   flex: 0 0 32%;
   height: 100px;
   margin-bottom: 5px;
