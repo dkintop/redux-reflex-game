@@ -112,3 +112,40 @@ a {
   text-decoration: none;
   color: white;
 }
+
+.score-list {
+  justify-content: space-around;
+  text-align: center;
+  display: grid;
+  flex-wrap: wrap;
+  background-color: whitesmoke;
+  width: 50%;
+  margin: auto;
+  padding: 1px;
+  border-radius: 5px;
+  border-color: rgb(0, 92, 92);
+  border-style: ridge;
+  border-radius: 5px;
+}
+
+.score-container {
+  margin: auto;
+  justify-content: space-around;
+  display: grid;
+  flex-wrap: wrap;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.wrapper {
+  justify-content: space-around;
+  text-align: center;
+  display: grid;
+  flex-wrap: wrap;
+  background-color: gray;
+  width: 50%;
+  margin: auto;
+  border-color: rgb(0, 92, 92);
+  border-style: ridge;
+  border-radius: 5px;
+}

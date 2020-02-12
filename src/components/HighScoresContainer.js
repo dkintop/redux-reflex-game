@@ -9,11 +9,14 @@ export class HighScoresContainer extends Component {
 
   render() {
     return (
-      <ol>
-        {this.props.highScores.map(score => (
-          <HighScore score={score} key={score.id} />
-        ))}
-      </ol>
+      <div id="score-container">
+        <div className="wrapper">RECORD BOARD</div>
+        <ol className="score-list">
+          {this.props.highScores.map(score => (
+            <HighScore score={score} key={score.id} />
+          ))}
+        </ol>
+      </div>
     );
   }
 }

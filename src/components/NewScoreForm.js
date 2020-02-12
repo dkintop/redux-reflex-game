@@ -38,6 +38,8 @@ export class NewScoreForm extends Component {
           />
           <input type="submit" value="submit score" />
         </form>
+        *This name will be displayed in the Highscore list (if you are quick
+        enough)
       </div>
     );
   }

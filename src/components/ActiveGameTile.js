@@ -57,7 +57,7 @@ export class ActiveGameTile extends Component {
 
         <div id="time-display">{this.formatTime()}</div>
         {/* {this.handleToggleForm()} */}
-        <NewScoreForm />
+        {/* <NewScoreForm /> */}
       </div>
     );
   }
