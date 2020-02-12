@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 export default class NavBar extends Component {
   render() {
@@ -7,14 +7,44 @@ export default class NavBar extends Component {
       <div>
         <nav className="main-nav">
           <li className="nav-link">
-            <Link to="/">Home</Link>
+            <NavLink
+              to="/"
+              activeStyle={{
+                backgroundColor: "rgb(1, 92, 92)",
+                color: "white",
+                padding: "5px"
+              }}
+              exact
+            >
+              Home
+            </NavLink>
           </li>
           <li className="nav-link">
-            <Link to="/game-start">Start Game</Link>
+            <NavLink
+              to="/game-start"
+              activeStyle={{
+                backgroundColor: "rgb(1, 92, 92)",
+                color: "white",
+                padding: "5px"
+              }}
+              exact
+            >
+              Start Game
+            </NavLink>
           </li>
 
           <li className="nav-link">
-            <Link to="/high-scores">High Scores</Link>
+            <NavLink
+              to="/high-scores"
+              activeStyle={{
+                backgroundColor: "rgb(1, 92, 92)",
+                color: "white",
+                padding: "5px"
+              }}
+              exact
+            >
+              High Scores
+            </NavLink>
           </li>
         </nav>
       </div>

@@ -25,7 +25,8 @@ export class NewScoreForm extends Component {
 
   render() {
     return (
-      <div>
+      <div id="form-container">
+        Submit Your Score!
         <form className="newScoreform" onSubmit={this.handleSubmit}>
           <label>Name</label>
           <input type="text" name="name" onChange={this.handleChange} />

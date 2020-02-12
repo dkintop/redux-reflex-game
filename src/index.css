@@ -91,11 +91,24 @@ code {
   border-color: rgb(1, 92, 92);
   border-style: solid;
   padding: 10px;
+  text-align: center;
 }
 
 #container {
   padding: 10px;
-  display: ;
+  text-align: center;
   margin: auto;
   justify-content: space-around;
+}
+
+#form-container {
+  justify-content: space-around;
+  text-align: center;
+  display: grid;
+  flex-wrap: wrap;
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }

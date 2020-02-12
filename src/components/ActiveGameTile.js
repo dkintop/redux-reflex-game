@@ -37,7 +37,7 @@ export class ActiveGameTile extends Component {
   };
 
   handleToggleForm = () => {
-    if (this.state.showForm) {
+    if (this.props.showForm) {
       return <NewScoreForm />;
     }
   };
@@ -65,7 +65,8 @@ export class ActiveGameTile extends Component {
 
 const mapStateToProps = state => {
   return {
-    score: state.gameReducer.score
+    score: state.gameReducer.score,
+    showForm: state.gameReducer.score
   };
 };
 
