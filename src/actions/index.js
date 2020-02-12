@@ -54,3 +54,9 @@ export const recordScore = score => {
     });
   };
 };
+
+export const showForm = () => {
+  return dispatch => {
+    dispatch({ type: "SHOW_FORM", payload: true });
+  };
+};

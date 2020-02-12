@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { recordScore } from "../actions/index.js";
 import { addHighScore } from "../actions/index.js";
+import { showForm } from "../actions/index.js";
 import { connect } from "react-redux";
 import { NewScoreForm } from "./NewScoreForm.js";
 export class ActiveGameTile extends Component {
@@ -45,6 +46,8 @@ export class ActiveGameTile extends Component {
     clearInterval(this.interval);
     this.props.recordScore(this.state.score);
     this.toggleForm();
+    debugger;
+    this.props.showForm();
   };
 
   render() {
@@ -69,7 +72,8 @@ const mapStateToProps = state => {
 let mapDispatchToProps = dispatch => {
   return {
     recordScore: score => dispatch(recordScore(score / 1000)),
-    addHighScore: score => dispatch(addHighScore(score))
+    addHighScore: score => dispatch(addHighScore(score)),
+    showForm: () => dispatch(showForm())
   };
 };
 

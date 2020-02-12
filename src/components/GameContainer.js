@@ -4,6 +4,12 @@ import { connect } from "react-redux";
 import Game from "./Game.js";
 import StartButton from "./StartButton.js";
 export class GameContainer extends Component {
+  handleToggleForm = () => {
+    if (this.props.showForm) {
+      return <NewScoreForm />;
+    }
+  };
+
   render() {
     let initialized = this.props.initialized;
     let component;
@@ -17,7 +23,7 @@ export class GameContainer extends Component {
       <div>
         {component}
         {/* //will pass game results down to NewScoreForm as prop */}
-        <NewScoreForm />
+        {this.handleToggleForm()}
       </div>
     );
   }
@@ -25,6 +31,7 @@ export class GameContainer extends Component {
 
 const mapStateToProps = state => {
   return {
+    showForm: state.gameReducer.showForm,
     score: state.gameReducer.score,
     initialized: state.gameReducer.initialized
   };

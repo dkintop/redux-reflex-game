@@ -1,5 +1,5 @@
 export default function gameReducer(
-  state = { score: "", initialized: false },
+  state = { score: "", initialized: false, showForm: false },
   action
 ) {
   switch (action.type) {
@@ -12,6 +12,7 @@ export default function gameReducer(
     case "RESET_GAME":
       return {
         ...state,
+        showForm: false,
         initialized: action.payload
       };
 
@@ -19,6 +20,12 @@ export default function gameReducer(
       return {
         ...state,
         score: action.payload
+      };
+
+    case "SHOW_FORM":
+      return {
+        ...state,
+        showForm: action.payload
       };
 
     default:
