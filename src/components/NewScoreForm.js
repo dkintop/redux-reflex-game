@@ -20,7 +20,6 @@ export class NewScoreForm extends Component {
   };
 
   render() {
-    debugger;
     return (
       <div>
         <form className="newScoreform" onSubmit={this.handleSubmit}>

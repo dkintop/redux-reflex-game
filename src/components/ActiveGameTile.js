@@ -40,7 +40,7 @@ export class ActiveGameTile extends Component {
       return <NewScoreForm />;
     }
   };
-
+  //this NewScoreform Component does not have access to the props that are mapped in NewScoreForm.js for some ungodly reason. that is why it errors out on submit
   handleClick = () => {
     clearInterval(this.interval);
     this.props.recordScore(this.state.score);
@@ -59,11 +59,11 @@ export class ActiveGameTile extends Component {
   }
 }
 
-let mapdispatchToProps = dispatch => {
+let mapDispatchToProps = dispatch => {
   return {
     recordScore: score => dispatch(recordScore(score / 1000)),
     addHighScore: score => dispatch(addHighScore(score))
   };
 };
 
-export default connect(null, mapdispatchToProps)(ActiveGameTile);
+export default connect(null, mapDispatchToProps)(ActiveGameTile);
