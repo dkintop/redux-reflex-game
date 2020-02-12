@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: lightslategray;
 }
 
 code {
@@ -36,6 +37,7 @@ code {
 
 #game-board {
   margin: auto;
+  padding: 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -55,4 +57,40 @@ code {
   color: teal;
   justify-content: space-around;
   display: flex;
+  padding: 3px;
+}
+
+.main-nav {
+  list-style-type: none;
+  margin: auto;
+
+  justify-content: space-evenly;
+  background-color: teal;
+  display: flex;
+  padding: 8px;
+  border-color: rgb(1, 92, 92);
+  border-width: 5px;
+  border-style: solid;
+}
+
+.nav-link {
+  display: inline;
+}
+
+#welcome-box {
+  display: flex;
+  margin: auto;
+  justify-content: space-around;
+  background-color: yellowgreen;
+  width: 50%;
+  border-color: rgb(1, 92, 92);
+  border-style: solid;
+  padding: 10px;
+}
+
+#container {
+  padding: 10px;
+  display: ;
+  margin: auto;
+  justify-content: space-around;
 }

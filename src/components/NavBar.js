@@ -6,18 +6,16 @@ export default class NavBar extends Component {
     return (
       <div>
         <nav className="main-nav">
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/game-start">Start Game</Link>
-            </li>
+          <li className="nav-link">
+            <Link to="/">Home</Link>
+          </li>
+          <li className="nav-link">
+            <Link to="/game-start">Start Game</Link>
+          </li>
 
-            <li>
-              <Link to="/high-scores">High Scores</Link>
-            </li>
-          </ul>
+          <li className="nav-link">
+            <Link to="/high-scores">High Scores</Link>
+          </li>
         </nav>
       </div>
     );
