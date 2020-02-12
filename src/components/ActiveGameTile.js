@@ -53,11 +53,18 @@ export class ActiveGameTile extends Component {
         <div>CLICK ME!</div>
 
         <div id="time-display">{this.formatTime()}</div>
-        {this.handleToggleForm()}
+        {/* {this.handleToggleForm()} */}
+        <NewScoreForm />
       </div>
     );
   }
 }
+
+const mapStateToProps = state => {
+  return {
+    score: state.gameReducer.score
+  };
+};
 
 let mapDispatchToProps = dispatch => {
   return {
@@ -66,4 +73,4 @@ let mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(null, mapDispatchToProps)(ActiveGameTile);
+export default connect(mapStateToProps, mapDispatchToProps)(ActiveGameTile);

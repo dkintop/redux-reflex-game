@@ -35,7 +35,7 @@ code {
   flex-wrap: wrap;
 }
 
-#game-board {
+.game-board {
   margin: auto;
   padding: 30px;
   display: flex;
@@ -46,6 +46,11 @@ code {
 
 #game-tile-active {
   justify-self: center;
+}
+
+.game-tile {
+  justify-content: space-around;
+  display: flex;
 }
 
 #banner-main {

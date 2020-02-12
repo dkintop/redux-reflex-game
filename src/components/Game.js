@@ -21,7 +21,7 @@ export class Game extends Component {
   };
 
   render() {
-    return <div id="game-board">{this.shuffledMatrix()}</div>;
+    return <div className="game-board">{this.shuffledMatrix()}</div>;
   }
 
   componentWillUnmount() {
