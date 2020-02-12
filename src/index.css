@@ -45,3 +45,14 @@ code {
 #game-tile-active {
   justify-self: center;
 }
+
+#banner-main {
+  text-shadow: 2px 2px rgb(121, 158, 18);
+  font-weight: bolder;
+  font-size: 50px;
+  background-color: yellowgreen;
+  margin: auto;
+  color: teal;
+  justify-content: space-around;
+  display: flex;
+}

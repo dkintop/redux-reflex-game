@@ -5,10 +5,12 @@ import Home from "./components/home.js";
 import GameContainer from "./components/GameContainer";
 import HighScoresContainer from "./components/HighScoresContainer";
 import NavBar from "./components/NavBar";
+import Banner from "./components/Banner";
 
 function App() {
   return (
     <Router>
+      <Banner />
       <NavBar />
       <Switch>
         <Route exact path="/">
