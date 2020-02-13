@@ -46,7 +46,7 @@ export class ActiveGameTile extends Component {
     clearInterval(this.interval);
     this.props.recordScore(this.state.score);
     this.toggleForm();
-    debugger;
+
     this.props.showForm();
   };
 
