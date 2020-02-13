@@ -43,6 +43,8 @@ export class NewScoreForm extends Component {
             />
             <input className="button" type="submit" value="submit score" />
           </form>
+          Score will not be saved if input is left blank
+          <br />
           *This name will be displayed in the Highscore list (if you were quick
           enough)
         </div>
