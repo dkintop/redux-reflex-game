@@ -7,8 +7,7 @@ export class NewScoreForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: "",
-      score: this.props.score
+      name: ""
     };
   }
   handleChange = event => {

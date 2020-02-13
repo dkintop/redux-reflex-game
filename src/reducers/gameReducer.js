@@ -11,7 +11,7 @@ export default function gameReducer(
 
     case "RESET_GAME":
       return {
-        ...state,
+        score: "",
         showForm: false,
         initialized: action.payload
       };

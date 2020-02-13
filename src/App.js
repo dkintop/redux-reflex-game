@@ -17,7 +17,7 @@ function App() {
           <Home />
         </Route>
 
-        <Route path="/game-start">
+        <Route path="/game">
           <GameContainer />
         </Route>
 
