@@ -15,8 +15,12 @@ export class StartButton extends Component {
         <div className="game-tile" key="30"></div>
         <div className="game-tile" key="40">
           <div>
-            <button id="start-button" onClick={this.handleClick}>
-              Start Game!
+            <button
+              id="start-button"
+              className="button"
+              onClick={this.handleClick}
+            >
+              START!
             </button>
           </div>
         </div>

@@ -25,21 +25,28 @@ export class NewScoreForm extends Component {
 
   render() {
     return (
-      <div id="form-container">
-        Submit Your Score!
-        <form className="newScoreform" onSubmit={this.handleSubmit}>
-          <label>Name</label>
-          <input type="text" name="name" onChange={this.handleChange} />
-          <input
-            type="hidden"
-            name="score"
-            onChange={this.handleChange}
-            value={this.props.score}
-          />
-          <input type="submit" value="submit score" />
-        </form>
-        *This name will be displayed in the Highscore list (if you are quick
-        enough)
+      <div id="form-wrapper">
+        <div id="form-container">
+          Submit Your Score!
+          <form className="newScoreform" onSubmit={this.handleSubmit}>
+            <label>Name:</label>
+            <input
+              type="text"
+              name="name"
+              onChange={this.handleChange}
+              id="name-input"
+            />
+            <input
+              type="hidden"
+              name="score"
+              onChange={this.handleChange}
+              value={this.props.score}
+            />
+            <input className="button" type="submit" value="submit score" />
+          </form>
+          *This name will be displayed in the Highscore list (if you were quick
+          enough)
+        </div>
       </div>
     );
   }
