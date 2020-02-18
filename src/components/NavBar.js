@@ -21,7 +21,7 @@ export default class NavBar extends Component {
           </li>
           <li className="nav-link">
             <NavLink
-              to="/game"
+              to="/game/new"
               activeStyle={{
                 backgroundColor: "rgb(1, 92, 92)",
                 color: "white",

@@ -4,6 +4,7 @@ export default class ShowScore extends Component {
   id = useParams();
 
   render() {
+    debugger;
     return <div>{this.id}</div>;
   }
 }

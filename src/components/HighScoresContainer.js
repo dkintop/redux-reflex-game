@@ -16,17 +16,9 @@ export class HighScoresContainer extends Component {
         <div className="wrapper">RECORD BOARD</div>
         <ol className="score-list">
           {this.props.highScores.map(score => (
-            <Link to={`high-score/${score.id}`}>
-              <HighScore score={score} key={score.id} />
-            </Link>
+            <HighScore score={score} key={score.id} />
           ))}
         </ol>
-
-        <Router>
-          <Switch>
-            <Route path="/high-scores/:id" children={<ShowScore />} />
-          </Switch>
-        </Router>
       </div>
     );
   }

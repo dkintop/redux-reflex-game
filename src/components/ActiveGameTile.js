@@ -41,7 +41,7 @@ export class ActiveGameTile extends Component {
       return <NewScoreForm />;
     }
   };
-  //this NewScoreform Component does not have access to the props that are mapped in NewScoreForm.js for some ungodly reason. that is why it errors out on submit
+
   handleClick = () => {
     clearInterval(this.interval);
     this.props.recordScore(this.state.score);
@@ -56,8 +56,6 @@ export class ActiveGameTile extends Component {
         <div>CLICK ME!</div>
 
         <div id="time-display">{this.formatTime()}</div>
-        {/* {this.handleToggleForm()} */}
-        {/* <NewScoreForm /> */}
       </div>
     );
   }
