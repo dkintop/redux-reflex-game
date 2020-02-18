@@ -189,3 +189,25 @@ a {
   font-size: 25px;
   border-radius: 10px;
 }
+
+.score-display-box {
+  justify-content: space-around;
+  text-align: center;
+  display: grid;
+  flex-wrap: wrap;
+  background-color: whitesmoke;
+  width: 50%;
+  margin-top: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 1px;
+  border-radius: 5px;
+  border-color: rgb(0, 92, 92);
+  border-style: ridge;
+  background-color: teal;
+  color: white;
+}
+
+#score-display-name {
+  background-color: rgb(0, 92, 92);
+}

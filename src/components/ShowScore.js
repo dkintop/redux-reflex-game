@@ -14,11 +14,12 @@ export const ShowScore = props => {
 
   return (
     <div className="score-display-box">
-      <p className="score-diplay-element">{targetScore.name}</p>
+      <p id="score-display-name">{targetScore.name}</p>
+
       <p>
         scored {targetScore.score} seconds on{" "}
         {targetScore.created_at.slice(0, 10)} at{" "}
-        {targetScore.created_at.slice(11, 17)}
+        {targetScore.created_at.slice(11, 16)}
       </p>
     </div>
   );
