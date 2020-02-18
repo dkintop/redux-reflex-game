@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import HighScore from "./HighScore.js";
 import { fetchScores } from "../actions/index.js";
-import ShowScore from "./ShowScore.js";
+import { ShowScore } from "./ShowScore.js";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
 export class HighScoresContainer extends Component {
@@ -19,6 +19,13 @@ export class HighScoresContainer extends Component {
             <HighScore score={score} key={score.id} />
           ))}
         </ol>
+
+        <Route
+          path={`/high-scores/:scoreId`}
+          render={routerProps => (
+            <ShowScore {...routerProps} scores={this.props.highScores} />
+          )}
+        />
       </div>
     );
   }

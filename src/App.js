@@ -23,7 +23,7 @@ function App() {
           <GameContainer />
         </Route>
 
-        <Route exact path="/high-scores">
+        <Route path="/high-scores">
           <HighScoresContainer />
         </Route>
       </Switch>

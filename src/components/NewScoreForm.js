@@ -53,7 +53,7 @@ export class NewScoreForm extends Component {
   }
 }
 
-let mapdispatchToProps = dispatch => {
+const mapdispatchToProps = dispatch => {
   return {
     addHighScore: score => dispatch(addHighScore(score)),
     restart: () => dispatch(resetGame())
