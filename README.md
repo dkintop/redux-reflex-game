@@ -3,7 +3,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Redux-reflex-game
 
 This application is a game in which the user can test their reaction time by clicking an element that appears in a randomized grid cell after the game has been started. The user can then submit their score to the database and view a highscores list.
-
+Link to video demoL
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=a57ym5qBnSE
 " target="_blank"><img src="http://img.youtube.com/vi/a57ym5qBnSE/0.jpg" 
 alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
