@@ -3,6 +3,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Redux-reflex-game
 
 This application is a game in which the user can test their reaction time by clicking an element that appears in a randomized grid cell after the game has been started. The user can then submit their score to the database and view a highscores list.
+Link to video demo:
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=a57ym5qBnSE
+" target="_blank"><img src="http://img.youtube.com/vi/a57ym5qBnSE/0.jpg" 
+alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+
 
 # Dependencies
 
@@ -23,5 +29,9 @@ This application is a game in which the user can test their reaction time by cli
 
 After cloning this project onto your local machine, run npm install to install dependencies, and then npm start to launch the application in your browser. This current build set to run on localhost:3001, allowing you to run the backend rails server on localhost:3000. You can find the rails backend api here: https://github.com/dkintop/redux-reflex-game-backend-api
 
+<<<<<<< HEAD
 # redux-reflex-game
 # Path-Game
+=======
+Video Demonstration Here: https://www.youtube.com/watch?v=a57ym5qBnSE
+>>>>>>> f54025989990d33115d03f5ffa52f72e787043ab

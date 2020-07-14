@@ -32,19 +32,10 @@ export const fetchScores = () => {
 };
 
 export const startGame = () => {
-  return dispatch => {
-    return dispatch({ type: "START_GAME", payload: true });
-  };
+  return { type: "START_GAME", payload: true };
 };
 
-export const resetGame = () => {
-  return dispatch => {
-    dispatch({
-      type: "RESET_GAME",
-      payload: false
-    });
-  };
-};
+export const resetGame = () => ({ type: "RESET_GAME", payload: false });
 
 export const recordScore = score => {
   return dispatch => {
