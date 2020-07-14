@@ -24,3 +24,4 @@ This application is a game in which the user can test their reaction time by cli
 After cloning this project onto your local machine, run npm install to install dependencies, and then npm start to launch the application in your browser. This current build set to run on localhost:3001, allowing you to run the backend rails server on localhost:3000. You can find the rails backend api here: https://github.com/dkintop/redux-reflex-game-backend-api
 
 # redux-reflex-game
+# Path-Game
